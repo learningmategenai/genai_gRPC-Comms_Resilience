@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package model;
+
+service ModelService {
+  rpc Predict (PredictRequest) returns (PredictResponse);
+}
+
+message PredictRequest {
+  // TODO: Define repeated float features, repeated int32 shape, and optional request_id
+}
+
+message PredictResponse {
+  // TODO: Define repeated float scores and model_version string
+}

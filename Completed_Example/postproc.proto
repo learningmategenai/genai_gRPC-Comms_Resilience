@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package postproc;
+
+service PostProcessor {
+  rpc Process (PostProcRequest) returns (PostProcResponse);
+}
+
+message PostProcRequest {
+  repeated float scores = 1;
+  string model_version = 2;
+  optional string format_type = 3;
+}
+
+message PostProcResponse {
+  repeated string formatted_predictions = 1;
+  bool success = 2;
+}

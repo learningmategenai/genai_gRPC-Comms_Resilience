@@ -1,1 +1,17 @@
+syntax = "proto3";
 
+package feature;
+
+service FeatureService {
+  rpc GetFeatures (FeatureRequest) returns (FeatureResponse);
+}
+
+message FeatureRequest {
+  string request_id = 1;
+}
+
+message FeatureResponse {
+  repeated float features = 1;
+  repeated int32 shape = 2;
+  optional string status = 3;
+}

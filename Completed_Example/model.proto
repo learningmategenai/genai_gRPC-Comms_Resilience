@@ -7,9 +7,12 @@ service ModelService {
 }
 
 message PredictRequest {
-  // TODO: Define repeated float features, repeated int32 shape, and optional request_id
+  repeated float features = 1;
+  repeated int32 shape = 2;
+  optional string request_id = 3;
 }
 
 message PredictResponse {
-  // TODO: Define repeated float scores and model_version string
+  repeated float scores = 1;
+  string model_version = 2;
 }

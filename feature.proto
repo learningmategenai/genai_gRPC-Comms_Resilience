@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package feature;
+
+// TODO: Complete the feature service request/response definitions
+service FeatureService {
+  rpc GetFeatures (FeatureRequest) returns (FeatureResponse);
+}
+
+message FeatureRequest {
+  string request_id = 1;
+}
+
+message FeatureResponse {
+  // TODO: Add repeated float for feature values and repeated int32 for shape
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package postproc;
+
+service PostProcessor {
+  rpc Process (PostProcRequest) returns (PostProcResponse);
+}
+
+message PostProcRequest {
+  // TODO: Complete message fields
+}
+
+message PostProcResponse {
+  // TODO: Complete message fields
+}
